@@ -1,0 +1,4 @@
+interface:
+  display_name: "JSON Prompt Engine"
+  short_description: "Generate final answers or reviewed downstream JSON prompt packages with full review governance"
+  default_prompt: "Use the json-prompt-engine skill to turn this request into a reviewed downstream JSON prompt package or a final answer."
