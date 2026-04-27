@@ -289,10 +289,6 @@
 
 ```text
 .
-├── 1.0/
-│   ├── json-prompt-engine_workflow_analysis.docx
-│   ├── json-prompt-engine_workflow_analysis.pdf
-│   └── mermaid-diagram.png
 ├── .agents/
 │   └── skills/
 │       └── json-prompt-engine/
@@ -304,14 +300,18 @@
 │               ├── json-schema.md
 │               ├── template-registry.md
 │               └── delivery-schema.md
-└── .claude/
-    └── skills/
-        └── json-prompt-engine/
-            ├── SKILL.md
-            └── references/
-                ├── json-schema.md
-                ├── template-registry.md
-                └── delivery-schema.md
+│── .claude/
+│   └── skills/
+│       └── json-prompt-engine/
+│           ├── SKILL.md
+│           └── references/
+│               ├── json-schema.md
+│               ├── template-registry.md
+│               └── delivery-schema.md
+│
+│── LICENSE
+└── README.md
+
 ```
 
 关键文件说明：
