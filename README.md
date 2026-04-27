@@ -8,7 +8,6 @@
 
 它更像一层 prompt 治理流程：先把复杂需求拆清楚、审查清楚，再决定生成最终答案，还是生成可交给下游模型的 prompt package。
 
-![json-prompt-engine workflow](./1.0/mermaid-diagram.png)
 
 ## 快速导航
 
