@@ -1,8 +1,8 @@
-# json-prompt-engine
+# ez prompt skill
 
 把一次性 prompt，变成可审查、可治理、可复用的 prompt package。
 
-`json-prompt-engine` 是一个面向 AI Agent / Skill 工作流的 prompt 治理引擎：它帮你把复杂、容易失控的自然语言需求，先整理成可审查、可复用、可交付的内部 JSON prompt，再生成最终答案或下游 prompt package。
+`ez prompt skill` 是一个面向 AI Agent / Skill 工作流的 prompt 治理引擎：它帮你把复杂、容易失控的自然语言需求，先整理成可审查、可复用、可交付的内部 JSON prompt，再生成最终答案或下游 prompt package。
 
 它不是独立 CLI，也不是 prompt 模板合集。
 
@@ -54,7 +54,7 @@
 - 生成后没有 `answer_review`
 - 下游模型拿到的信息过多，既冗余又不稳定
 
-`json-prompt-engine` 的目标，不是把 prompt 写得更华丽，而是把这些隐性控制逻辑显式化：先结构化，再生成；先审查，再交付。
+`ez prompt skill` 的目标，不是把 prompt 写得更华丽，而是把这些隐性控制逻辑显式化：先结构化，再生成；先审查，再交付。
 
 ## 适合谁
 
@@ -91,7 +91,7 @@
 
 > 帮我优化这个 prompt，让它更适合生成产品立项文档，并输出可复用的 hybrid prompt package。
 
-`json-prompt-engine` 不会直接开始润色，而是会先判断：
+`ez prompt skill` 不会直接开始润色，而是会先判断：
 
 - 这不是普通写作，而是现有 prompt 的升级任务
 - 应优先路由到 `prompt-upgrade` 这一类正式 slot
@@ -148,7 +148,7 @@
 
 ## 核心能力
 
-`json-prompt-engine` 的核心不是“把 prompt 写得更像样”，而是让 prompt 生成过程更稳定。
+`ez prompt skill` 的核心不是“把 prompt 写得更像样”，而是让 prompt 生成过程更稳定。
 
 - **任务分类**：先识别任务类型，再决定进入哪个 slot
 - **治理强度解析**：用 `control_mode` 判断这次任务需要多严格的控制方式
@@ -162,9 +162,9 @@
 
 普通 prompt 模板通常关注“怎么把话写好”。
 
-`json-prompt-engine` 更关注“怎么让 prompt 生成过程可治理”：
+`ez prompt skill` 更关注“怎么让 prompt 生成过程可治理”：
 
-| 对比项 | 普通 prompt 模板 | json-prompt-engine |
+| 对比项 | 普通 prompt 模板 | ez prompt skill |
 |---|---|---|
 | 核心目标 | 写出一段更好的 prompt | 生成可审查、可复用的 prompt package |
 | 控制方式 | 靠自然语言约束 | 用结构化字段承载约束 |
@@ -191,7 +191,7 @@
 使用：
 
 ```text
-.agents/skills/json-prompt-engine/
+.agents/skills/ez prompt skill/
 ```
 
 这个目录包含：
@@ -205,7 +205,7 @@
 使用：
 
 ```text
-.claude/skills/json-prompt-engine/
+.claude/skills/ez prompt skill/
 ```
 
 这个目录包含：
@@ -219,7 +219,7 @@
 
 > 请把这个自然语言需求升级成受治理的 JSON prompt，并输出 hybrid_prompt_package。
 
-如果宿主能够识别到 `json-prompt-engine`，它不应该立刻只给你一句成品 prompt，而应先表现出：
+如果宿主能够识别到 `ez prompt skill`，它不应该立刻只给你一句成品 prompt，而应先表现出：
 
 - 任务分类或 slot 识别
 - 治理强度判断
@@ -234,7 +234,7 @@
 
 ## 工作原理
 
-`json-prompt-engine` 的核心思想是：**先治理，再生成；先结构化，再交付。**
+`ez prompt skill` 的核心思想是：**先治理，再生成；先结构化，再交付。**
 
 你可以把几个关键术语先这样理解：
 
@@ -274,12 +274,12 @@
 
 | 文件 | 说明 |
 |---|---|
-| `.agents/skills/json-prompt-engine/SKILL.md` | 证明主 workflow、控制层和 review / revision 规则存在 |
-| `.agents/skills/json-prompt-engine/references/json-schema.md` | 证明 internal JSON prompt 有结构化约束 |
-| `.agents/skills/json-prompt-engine/references/template-registry.md` | 证明 task type、slot 和 overlay 规则存在 |
-| `.agents/skills/json-prompt-engine/references/delivery-schema.md` | 证明内部对象到交付 payload 有映射规则 |
+| `.agents/skills/ez prompt skill/SKILL.md` | 证明主 workflow、控制层和 review / revision 规则存在 |
+| `.agents/skills/ez prompt skill/references/json-schema.md` | 证明 internal JSON prompt 有结构化约束 |
+| `.agents/skills/ez prompt skill/references/template-registry.md` | 证明 task type、slot 和 overlay 规则存在 |
+| `.agents/skills/ez prompt skill/references/delivery-schema.md` | 证明内部对象到交付 payload 有映射规则 |
 | `1.0/mermaid-diagram.png` | 证明 workflow 可以被可视化审查 |
-| `1.0/json-prompt-engine_workflow_analysis.pdf` | 证明已有独立工作流还原与评审材料 |
+| `1.0/ez prompt skill_workflow_analysis.pdf` | 证明已有独立工作流还原与评审材料 |
 
 这些文件合起来说明：它不是口头方法论，而是一套可被阅读、检查、复核的结构化 skill。
 
@@ -291,7 +291,7 @@
 .
 ├── .agents/
 │   └── skills/
-│       └── json-prompt-engine/
+│       └── ez prompt skill/
 │           ├── SKILL.md
 │           ├── PORTABILITY.md
 │           ├── agents/
@@ -302,7 +302,7 @@
 │               └── delivery-schema.md
 │── .claude/
 │   └── skills/
-│       └── json-prompt-engine/
+│       └── ez prompt skill/
 │           ├── SKILL.md
 │           └── references/
 │               ├── json-schema.md
@@ -325,7 +325,7 @@
 
 ## 边界说明
 
-`json-prompt-engine` 当前更适合作为 AI Agent / Skill 宿主环境中的治理层，而不是独立运行的软件。
+`ez prompt skill` 当前更适合作为 AI Agent / Skill 宿主环境中的治理层，而不是独立运行的软件。
 
 当前已知边界：
 
@@ -338,11 +338,11 @@
 
 ## Star History
 
-<a href="https://www.star-history.com/?repos=Rayyy3320%2Fjson-prompt-engine&type=date&legend=top-left">
+<a href="https://www.star-history.com/?repos=Rayyy3320%2Fez prompt skill&type=date&legend=top-left">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=Rayyy3320/json-prompt-engine&type=date&theme=dark&legend=top-left" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=Rayyy3320/json-prompt-engine&type=date&legend=top-left" />
-   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=Rayyy3320/json-prompt-engine&type=date&legend=top-left" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=Rayyy3320/ez prompt skill&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=Rayyy3320/ez prompt skill&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=Rayyy3320/ez prompt skill&type=date&legend=top-left" />
  </picture>
 </a>
 
