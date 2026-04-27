@@ -335,6 +335,17 @@
 
 如果你的任务只是一次性轻量问答，直接写 prompt 可能更轻。
 
+
+## Star History
+
+<a href="https://www.star-history.com/?repos=Rayyy3320%2Fjson-prompt-engine&type=date&legend=top-left">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=Rayyy3320/json-prompt-engine&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=Rayyy3320/json-prompt-engine&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=Rayyy3320/json-prompt-engine&type=date&legend=top-left" />
+ </picture>
+</a>
+
 ## 许可证
 
 MIT License
