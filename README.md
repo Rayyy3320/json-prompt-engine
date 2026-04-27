@@ -8,6 +8,11 @@
 
 它更像一层 prompt 治理流程：先把复杂需求拆清楚、审查清楚，再决定生成最终答案，还是生成可交给下游模型的 prompt package。
 
+<p align="center">
+  <strong>语言</strong>：
+  <a href="./README.md">简体中文</a> |
+  <a href="./README%20en.md">English</a>
+</p>
 
 ## 快速导航
 
@@ -338,11 +343,11 @@
 
 ## Star History
 
-<a href="https://www.star-history.com/?repos=Rayyy3320%2Fez-prompt-skill&type=date&legend=top-left">
+<a href="https://www.star-history.com/?repos=Rayyy3320%2Fez prompt skill&type=date&legend=top-left">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=Rayyy3320/ez-prompt-skill&type=date&theme=dark&legend=top-left" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=Rayyy3320/ez-prompt-skill&type=date&legend=top-left" />
-   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=Rayyy3320/ez-prompt-skill&type=date&legend=top-left" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=Rayyy3320/ez prompt skill&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=Rayyy3320/ez prompt skill&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=Rayyy3320/ez prompt skill&type=date&legend=top-left" />
  </picture>
 </a>
 
